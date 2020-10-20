@@ -1,0 +1,46 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 203, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 446, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 446, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 456, in _execute_python_hide
+    renpy.load("_reload-2")
+AttributeError: 'StoreModule' object has no attribute 'PongDisplayable'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "E:\RENPY\renpy\bootstrap.py", line 306, in bootstrap
+    renpy.main.main()
+  File "E:\RENPY\renpy\main.py", line 513, in main
+    run(restart)
+  File "E:\RENPY\renpy\main.py", line 139, in run
+    renpy.execution.run_context(True)
+  File "E:\RENPY\renpy\execution.py", line 879, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 203, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 446, in script
+    python hide:
+  File "E:\RENPY\renpy\ast.py", line 862, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "E:\RENPY\renpy\python.py", line 1912, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/00keymap.rpy", line 446, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 456, in _execute_python_hide
+    renpy.load("_reload-2")
+  File "E:\RENPY\renpy\loadsave.py", line 727, in load
+    roots, log = loads(location.load(filename))
+  File "E:\RENPY\renpy\loadsave.py", line 60, in loads
+    return cPickle.loads(s)
+AttributeError: 'StoreModule' object has no attribute 'PongDisplayable'
+
+Windows-8-6.2.9200
+Ren'Py 7.0.0.196
+Beyonethelimit 1.00
+Tue Jul 17 19:55:23 2018
